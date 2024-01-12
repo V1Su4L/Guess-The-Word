@@ -15,10 +15,14 @@ quotes = [
     ['Audit', 'your', 'mistakes']
 ]
 
-# selecting 3 random sentences.
-choice = list(random.sample(quotes, k=3))
+# selecting 1 random sentences.
+choice = list(random.sample(quotes, k=1))
 print(choice)
 
-for i in range(3):
+# print sentences as '_'
+for i in range(len(choice)):
     sentence = ' '.join(['_' * len(word) for word in choice[i]])
     print(sentence)
+
+# get user input
+user_input = input('Enter 1 character: ')
