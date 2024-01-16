@@ -55,12 +55,15 @@ while re_match:
 
     print(f'You guessed the whole sentence, it was: {full_sentence},\nScore: {score}\n')
 
+    re_match_input = ''
+
     while True:
-        re_match = input("Would you like to play another round? (Y/N) \n").upper()
-        if re_match in {'Y', 'N'}:
+        re_match_input = input("Would you like to play another round? (Y/N) \n").upper()
+        if re_match_input in {'Y', 'N'}:
             break
         else:
             print("Please enter either 'Y' or 'N'.")
 
-if re_match == 'N':
-    print("Thanks for playing the game... Bye bye!\n")
+    if re_match_input == 'N':
+        print("Thanks for playing the game... Bye bye!\n")
+        re_match = False
